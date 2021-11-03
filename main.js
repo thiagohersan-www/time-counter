@@ -10,7 +10,7 @@ for (let i = 0; i < TOTAL_DAYS; i++) {
 }
 
 
-let seed = 0xABCD;
+let seed = (new Date()).getFullYear();
 function seededRandom() {
     const x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
