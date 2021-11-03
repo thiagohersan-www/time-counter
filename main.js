@@ -44,7 +44,7 @@ function today() {
 
 function setCounter() {
     document.getElementById('my-counter').value = mCounter[today()];
-    setInterval(setCounter, 60 * 60 * 1000);
+    setTimeout(setCounter, 60 * 60 * 1000);
 }
 
 window.addEventListener('DOMContentLoaded', () => {
