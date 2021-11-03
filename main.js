@@ -42,3 +42,11 @@ function today() {
     return `${mDate.getMonth() + 1}-${mDate.getDate()}`;
 }
 
+function setCounter() {
+    document.getElementById('my-counter').value = mCounter[today()];
+    setInterval(setCounter, 60 * 60 * 1000);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    setCounter();
+});
